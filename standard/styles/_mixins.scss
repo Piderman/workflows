@@ -16,6 +16,18 @@ $prefixes: "-webkit-", "-moz-", "";
 	}
 }
 
+@mixin breakpoint($arg) {
+	@if $isMedia {
+		@media ( min-width: $arg) {
+			@content;
+		}
+
+	// simply override the rule so cascade still works
+	} @else {
+		@content;
+	}
+}
+
 
 //----------------------------------------------------------------------------
 

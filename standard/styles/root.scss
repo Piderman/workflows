@@ -1,11 +1,18 @@
-//! small demo for testing sass
+// small demo for testing sass
 
 /*!
-* btw what comments get outputted?
+* testing building basic sass setup
 */
 
+
+$isMedia: true;
+
+
+// what would be the helpers / vendor importts
 @import "variables";
 @import "mixins";
 
+
+// work on site here
 @import "base";
 @import "modules"
