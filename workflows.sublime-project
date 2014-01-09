@@ -1,0 +1,9 @@
+{
+	"folders":
+	[
+		{
+			"path": "/Users/matty/Git/workflows",
+			"folder_exclude_patterns": [".sass-cache"]
+		}
+	]
+}
