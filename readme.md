@@ -2,7 +2,7 @@
 
 Experimenting with different workflow tools trying to achieve these tasks
 
-- concatinate javascript
+- concatenate javascript
 - compile sass
 - livereload
 - different "build" environments for local/development to live/production 
