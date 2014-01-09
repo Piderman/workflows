@@ -11,7 +11,7 @@ $prefixes: "-webkit-", "-moz-", "";
 
 // boring loop
 @mixin box-sizing($arg){
-	$each $prefix in $prefixes {
+	@each $prefix in $prefixes {
 		#{$prefix}box-sizing: $arg;
 	}
 }
@@ -39,5 +39,6 @@ $prefixes: "-webkit-", "-moz-", "";
 %alpha,
 .alpha {
 	font-size: 4em;
+	font-family: $brand__font;
 	color: $brand__color;
 }

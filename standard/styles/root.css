@@ -1,0 +1,54 @@
+/*!
+* btw what comments get outputted?
+*/
+/*
+* so we can see that variables are being used in other files
+* this file doesn't have css so its a good test
+*/
+/*
+* test out some logic that uses variables and potentially creates markup
+* 
+* 
+*/
+.m-form .form__submit,
+.button {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #b3b3b5;
+  text-shadow: 0 1px 0 #fff;
+  text-align: center; }
+  .m-form [href].form__submit,
+  .button[href] {
+    text-decoration: none; }
+
+.t-copy h1,
+.alpha {
+  font-size: 4em;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #41a096; }
+
+/*! begin modules  */
+.m-nesting {
+  display: block;
+  background: rgba(65, 160, 150, 0.2); }
+  .m-nesting .nested__rule {
+    text-align: right; }
+    .m-nesting .nested__rule:before {
+      content: "psuedo"; }
+  .m-nesting .nested__firstLevel {
+    position: static;
+    top: 0;
+    left: -100%; }
+    .beforeSelector .m-nesting .nested__firstLevel {
+      position: absolute;
+      z-index: 5; }
+  .m-nesting .inceptionRule {
+    float: left; }
+    .m-nesting .inceptionRule + li {
+      margin-left: 10px; }
+    .m-nesting .inceptionRule .tooDeep {
+      color: #b3b3b5; }
+      .m-nesting .inceptionRule .tooDeep .whyYouNoStop {
+        position: relative; }
+        .m-nesting .inceptionRule .tooDeep .whyYouNoStop .iCantBelieveYouDidntStop {
+          font-size: 1em; }
