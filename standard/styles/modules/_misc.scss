@@ -1,0 +1,45 @@
+// netsing testing
+
+.m-nesting {
+
+	display: block;
+	background: rgba($brand__color, 0.2);
+
+	.nested__rule {
+		text-align: right;
+
+		&:before {
+			content: "psuedo";
+		}
+	}
+
+
+	.nested__firstLevel {
+		position: static;
+		top: 0;
+		left: -100%;
+
+
+		.beforeSelector & {
+			position: absolute;
+			z-index: 5;
+		}
+	}
+
+
+	.inceptionRule {
+		float: left;
+
+		+ li { margin-left: 10px; }
+		
+		.tooDeep {
+			color: #b3b3b5; 
+
+			.whyYouNoStop {
+				position: relative;
+
+				.iCantBelieveYouDidntStop { font-size: 1em; }
+			}
+		}
+	}
+}

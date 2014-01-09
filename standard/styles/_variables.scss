@@ -1,0 +1,15 @@
+/*
+* so we can see that variables are being used in other files
+* this file doesn't have css so its a good test
+*/
+
+// we know these aren't outputted anyway
+$brand__color: $red;
+
+$brand__font: "Open Sans", Helvetica, sans-serift
+
+$gutter: 10px;
+$gutter--tablet: 10px;
+$gutter--desktop: 20px;
+
+$sprite: "/standard/images/icons.png";

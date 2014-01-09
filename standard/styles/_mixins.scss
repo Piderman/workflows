@@ -1,0 +1,43 @@
+/*
+* test out some logic that uses variables and potentially creates markup
+* 
+* 
+*/
+
+
+// need the last as blank so we can output prefix free
+$prefixes: "-webkit-", "-moz-", "";
+
+
+// boring loop
+@mixin box-sizing($arg){
+	$each $prefix in $prefixes {
+		#{$prefix}box-sizing: $arg;
+	}
+}
+
+
+//----------------------------------------------------------------------------
+
+
+%button,
+.button {
+	display: inline-block;
+
+	padding: 5px 10px;
+	background: #b3b3b5;
+
+	text-shadow: 0 1px 0 #fff;
+	text-align: center;
+
+	// stop <a>'s getting this by mistake
+	&[href] { text-decoration: none; }
+}
+
+
+// pragmatic font sizing ala css wizardry
+%alpha,
+.alpha {
+	font-size: 4em;
+	color: $brand__color;
+}
