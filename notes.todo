@@ -1,8 +1,13 @@
 starting point:
   ☐ javascript files
-  ☐ sass files
+  ✔ sass files @done (14-01-10 00:24)
+  ☐ vendor files
 
 
 builds:
   ☐ local
   ☐ live
+
+
+ general:
+   ☐ ST2 sidebar appears to no longer update, guard issue?
