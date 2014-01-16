@@ -4,6 +4,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     uglify: {
       my_target: {
+        options : {
+          sourceMap : 'main.js.map'
+          // beautify : true
+        },
         files: {
           'standard/scripts/main.min.js': [
             'standard/scripts/init.js',

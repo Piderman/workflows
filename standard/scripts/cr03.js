@@ -62,6 +62,8 @@ var cr03 = {
 
 
 		this.applyHomeIcon();
+
+		console.log("derp");
 	},
 
 	closeNav : function() {

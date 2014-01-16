@@ -3,3 +3,4 @@
 standard/styles/root.css
 node_modules
 standard/scripts/*.min.*
+*.map
