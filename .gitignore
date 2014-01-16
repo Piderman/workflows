@@ -1,3 +1,5 @@
 *.sublime-workspace
 *.sass-cache
 standard/styles/root.css
+node_modules
+standard/scripts/*.min.*
