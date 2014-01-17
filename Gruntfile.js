@@ -6,28 +6,40 @@ module.exports = function(grunt) {
     // see http://culttt.com/2013/11/18/setting-sass-grunt/#highlighter_929506
 
     // update this on a per-project basis?
-    project : {
-      css : "standard/styles"
+    project: {
+      css: "standard/styles",
+      js: "standard/scripts"
     },
 
     uglify: {
-        my_target: {
-          options : {
-            sourceMap : 'main.js.map',
-            beautify: true,
-            mangle: false
-          },
-          
-          // what files to build. order is important so list all
-          files: {
-            'standard/scripts/main.js': [
-              'standard/scripts/init.js',
-              'standard/scripts/helpers.js',
-              'standard/scripts/cr03.js',
-              'standard/scripts/breadcrumb.js'
-            ]
-          }
+      dev: {
+        options : {
+          sourceMap: 'main.js.map',
+          beautify: true,
+          mangle: false
+        },
+        
+        // what files to build. order is important so list all
+        files: {
+          'standard/scripts/main.js': [
+            'standard/scripts/init.js',
+            'standard/scripts/helpers.js',
+            'standard/scripts/cr03.js',
+            'standard/scripts/breadcrumb.js'
+          ]
         }
+      },
+      
+      prod: {
+        files: {
+          'standard/scripts/main.js': [
+            'standard/scripts/init.js',
+            'standard/scripts/helpers.js',
+            'standard/scripts/cr03.js',
+            'standard/scripts/breadcrumb.js'
+          ]
+        }
+      }
     },
 
     // local and prod settings
@@ -52,7 +64,7 @@ module.exports = function(grunt) {
         options: {
           style: "compressed"
         },
-        files : {
+        files: {
           "<%= project.css %>/screen.css" : "<%= project.css %>/screen.scss",
           "<%= project.css %>/nomedia.css" : "<%= project.css %>/nomedia.scss"
 
@@ -74,6 +86,11 @@ module.exports = function(grunt) {
         tasks: ['sass:dev']
       },
 
+      js: {
+        files: 'standard/scripts/*.js',
+        tasks: ['uglify:dev']
+      },
+
 
       livereload: {
         files: ['*.html', '**/*.css'],
@@ -92,6 +109,8 @@ module.exports = function(grunt) {
   // Default task(s).
 
   grunt.registerTask('default', 'watch');
+
+  grunt.registerTask('production', ['sass:prod', 'uglify:prod']);
 
   /*
   * go for launch

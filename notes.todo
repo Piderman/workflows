@@ -1,5 +1,4 @@
 this commit:
- ☐ multiple sass files
 
 starting point:
   ✔ javascript files @done (14-01-16 10:57)
@@ -10,12 +9,12 @@ scss:
  ✔ dev mode @done (14-01-17 11:05)
  ✔ prod mode @done (14-01-17 11:33)
  ✔ watching @done (14-01-17 11:27)
- ☐ multiple files ala media/no-media.css
+ ✔ multiple files ala media/no-media.css @done (14-01-17 12:51)
 
 js:
-  ☐ dev mode
-  ☐ prod mode
-  ☐ uglify
+  ✔ dev mode @done (14-01-17 15:22)
+  ✔ prod mode @done (14-01-17 15:22)
+  ✔ uglify @done (14-01-17 15:22)
 
 
  general:

@@ -1,6 +1,7 @@
 *.sublime-workspace
 *.sass-cache
-standard/styles/root.css
+standard/styles/*.css
 node_modules
 standard/scripts/*.min.*
+standard/scripts/main.*
 *.map

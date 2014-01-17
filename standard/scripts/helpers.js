@@ -6,9 +6,6 @@ var wsHelpers = {
 	init : function() {
 		// cache le body
 		$body = $("body");
-
-
-		console.log("inited");
 	},
 
     getPseudoContent: function () {
