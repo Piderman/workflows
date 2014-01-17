@@ -3,10 +3,16 @@ starting point:
   ✔ sass files @done (14-01-10 00:24)
   ☐ vendor files
 
+css:
+ ✔ dev mode @done (14-01-17 11:05)
+ ☐ prod mode
+ ☐ watching
+ ☐ multiple files ala media/no-media.css
 
-builds:
-  ☐ local
-  ☐ live
+js:
+  ☐ dev mode
+  ☐ prod mode
+  ☐ uglify
 
 
  general:
