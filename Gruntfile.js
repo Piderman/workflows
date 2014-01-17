@@ -64,6 +64,12 @@ module.exports = function(grunt) {
 
         // and do what with said change?
         tasks: ['sass:dev']
+      },
+      livereload: {
+        files: ['*.html', '**/*.css'],
+        options: {
+          livereload: true
+        }
       }
     }
   });
