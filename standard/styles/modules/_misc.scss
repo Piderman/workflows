@@ -38,8 +38,25 @@
 			.whyYouNoStop {
 				position: relative;
 
-				.iCantBelieveYouDidntStop { font-size: 1em; }
+				.iCantBelieveYouDidntStop { font-size: 2em; }
 			}
+		}
+	}
+}
+
+
+
+nav {
+	@extend %clearfix;
+
+	li {
+		display: block;
+
+
+		@include breakpoint(40em) {
+			float: left;
+
+			+ li { margin-left: 10px; }
 		}
 	}
 }

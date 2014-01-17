@@ -3,12 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Grunt</title>
-	<link rel="stylesheet" href="standard/styles/root.css">
+	<!--[if (lt IE 9) & (!IEMobile)]>
+		<link rel="stylesheet" href="standard/styles/screen.css" />
+	<![endif]-->
+
+	<!--[if (gte IE 9) | (IEMobile)]><!-->
+		<link rel="stylesheet" href="standard/styles/nomedia.css" />
+	<!--<![endif]-->
 </head>
 <body>
 	<script src="vendors/jquery/jquery-1.7.1.min.js"></script>
 	<h1>dat h1</h1>
 
+	<nav>
+		<ul>
+			<li><a href="#">sit.</a></li>
+			<li><a href="#">Lorem ipsum</a></li>
+			<li><a href="#">dolor</a></li>
+		</ul>
+	</nav>
 
 	<h2>sourcemaps</h2>
 	<div class="m-nesting">

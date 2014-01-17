@@ -39,7 +39,11 @@ module.exports = function(grunt) {
           style: "expanded",
           sourcemap: true
         },
-        files : { "<%= project.css %>/root.css" : "<%= project.css %>/root.scss"}
+        files : {
+          "<%= project.css %>/screen.css" : "<%= project.css %>/screen.scss",
+          "<%= project.css %>/nomedia.css" : "<%= project.css %>/nomedia.scss"
+
+        }
       },
       
 
@@ -48,7 +52,11 @@ module.exports = function(grunt) {
         options: {
           style: "compressed"
         },
-        files : { "<%= project.css %>/root.css" : "<%= project.css %>/root.scss"}
+        files : {
+          "<%= project.css %>/screen.css" : "<%= project.css %>/screen.scss",
+          "<%= project.css %>/nomedia.css" : "<%= project.css %>/nomedia.scss"
+
+        }
       }
     },
 
@@ -65,12 +73,23 @@ module.exports = function(grunt) {
         // and do what with said change?
         tasks: ['sass:dev']
       },
+
+
       livereload: {
         files: ['*.html', '**/*.css'],
         options: {
           livereload: true
         }
       }
+    }
+
+
+    /*
+    * go for launch
+    */
+
+    push: {
+      tasks: ['sass:prod']
     }
   });
 
@@ -83,5 +102,7 @@ module.exports = function(grunt) {
   // grunt.registerTask('default', ['uglify']);
 
   grunt.registerTask('default', 'watch');
+
+  grunt.registerTask('push', 'push:tasks');
 
 };
