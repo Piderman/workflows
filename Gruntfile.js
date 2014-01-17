@@ -11,23 +11,23 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      my_target: {
-        options : {
-          sourceMap : 'main.js.map'
-          // beautify : true
-        },
-        
-
-        // what files to build. order is important so list all
-        files: {
-          'standard/scripts/main.min.js': [
-            'standard/scripts/init.js',
-            'standard/scripts/helpers.js',
-            'standard/scripts/cr03.js',
-            'standard/scripts/breadcrumb.js'
-          ]
+        my_target: {
+          options : {
+            sourceMap : 'main.js.map',
+            beautify: true,
+            mangle: false
+          },
+          
+          // what files to build. order is important so list all
+          files: {
+            'standard/scripts/main.js': [
+              'standard/scripts/init.js',
+              'standard/scripts/helpers.js',
+              'standard/scripts/cr03.js',
+              'standard/scripts/breadcrumb.js'
+            ]
+          }
         }
-      }
     },
 
     // local and prod settings
@@ -82,15 +82,6 @@ module.exports = function(grunt) {
         }
       }
     }
-
-
-    /*
-    * go for launch
-    */
-
-    push: {
-      tasks: ['sass:prod']
-    }
   });
 
   // Load the plugin that provides the "uglify" task.
@@ -99,10 +90,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  // grunt.registerTask('default', ['uglify']);
 
   grunt.registerTask('default', 'watch');
 
-  grunt.registerTask('push', 'push:tasks');
-
+  /*
+  * go for launch
+  */
 };
